@@ -1,0 +1,94 @@
+h1
+{
+    font-size: max(5vw, 60px);
+}
+h2
+{
+    font-size: max(2.5vw, 35px);
+}
+p
+{
+    font-size: max(1vw, 20px);
+}
+a
+{
+    font-size: max(1vw, 14px);
+    
+}
+#main_Body
+{
+    width:100vw;
+    background-color:white;
+    position:relative;
+}
+.parallax_Effect_Creator
+{
+    height:100vh;
+    background-image: url('../Images/Screenshot (70).png');
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+body
+{
+    overflow-x:hidden;
+    margin: 0;
+}
+#title_Of_Page
+{
+    display:inline-block;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    position:absolute;
+    color: white;
+}
+.footer
+{
+    display:inline-block;
+    width:100vw;
+    margin-top:10vh;
+    position:relative;
+    background-color:cornflowerblue;
+    font-size: 0;
+}
+.header
+{
+    display:inline-block;
+    width:100vw;
+    position:relative;
+    background-color:cornflowerblue;
+    font-size: 0;
+}
+.link
+{
+    display:inline-block;
+    position: relative;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    outline-style: solid;
+    outline-width: 20%;
+    outline-color: black;
+    outline-offset: 0.25vw;
+    color: black;
+    border-radius: 0.25vh;
+    background-color: rgba(400,400,400,0.2);
+}
+@media (min-width:320px)  {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width:481px)  {
+ /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width:641px)  {
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width:961px)  {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width:1025px) {
+/* big landscape tablets, laptops, and desktops */
+}
+@media (min-width:1281px) {
+/* hi-res laptops and desktops */
+}

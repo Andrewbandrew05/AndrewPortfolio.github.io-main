@@ -1,0 +1,68 @@
+.parallax_Effect_Creator
+{
+    background-image: url('../Images/Screenshot 2024-04-11 162922.png');
+}
+#title_Of_Page
+{
+    outline-style: solid;
+    outline-offset: 0.5vw;
+    outline-color: black;
+    outline-width: 1vw;
+    background-color: rgba(0,0,0, 0.5);
+}
+.subtitle
+{
+    color:black;
+    display:inline-block;
+    position:relative;
+    outline-color: black;
+    outline-style: solid;
+    outline-width: 0.25vw;
+    outline-offset: 0.5vw;
+}
+.side_By_Side
+{
+    height:70vh;
+    width:100vw;
+    position:relative;
+    background-color: black;
+}
+.box
+{
+    width:50vw;
+    height:70vh;
+    position:absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.left_Box
+{
+    background-color:rgb(203, 234, 236);
+}
+.right_Box
+{
+    background-color:rgb(203, 234, 236);
+    left:50vw;
+}
+#background
+{
+    margin-top:0vh;
+}
+.text
+{
+    display:inline-block;
+    width:80%;
+    position:absolute;
+    color:black;
+    background-color:rgba(400,400,400,0.3);
+    margin: 0 0 0 0;
+    outline-color: black;
+    outline-style: solid;
+    outline-offset: 0.25vw;
+}
+.box_Image
+{
+    position:absolute;
+    margin:0 0 0 0;
+    width:50%;
+}

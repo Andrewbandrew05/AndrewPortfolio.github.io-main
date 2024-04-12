@@ -1,0 +1,41 @@
+
+#main_Body
+{
+    width:100vw;
+    height:200vh;
+    background-color:green;
+    position:relative;
+}
+.subtitle
+{
+    color:blueviolet;
+    display:inline-block;
+    position:relative;
+}
+.side_By_Side
+{
+    height:50vh;
+    width:100vw;
+    position:relative;
+    background-color: black;
+}
+.box
+{
+    width:50vw;
+    height:50vh;
+    position:absolute;
+}
+.left_Box
+{
+    background-color:yellow;
+}
+.right_Box
+{
+    background-color:aquamarine;
+    left:50vw;
+}
+#top_Side_By_Side
+{
+    margin-top:0vh;
+}
+
