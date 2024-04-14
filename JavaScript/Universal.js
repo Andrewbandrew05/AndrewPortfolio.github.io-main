@@ -135,6 +135,25 @@ function arrange_Links_In_LinkHolders()
         if(num_Links_In_Row > 0) {
             calculate_Margins(total_Link_Width_In_Row, num_Links_In_Row, total_Links_Processed, linkHolder);     
         }
+        if(linkHolder.classList.contains("footer")) {
+            //document.getElementById("main_Body").style.height = document.getElementById("lastElement").getBoundingClientRect().top + document.getElementById("lastElement").getBoundingClientRect().height;
+            /**document.body.style.height = linkHolder.getBoundingClientRect().top + linkHolder.getBoundingClientRect().height;
+            document.getElementById("main_Body").style.height = document.body.getBoundingClientRect().height - document.getElementById("parallax_Effect_Creator").getBoundingClientRect().height;
+            **/
+            document.body.style.height = document.getElementById("main_Body").getBoundingClientRect().height+document.getElementById("parallax_Effect_Creator").getBoundingClientRect().height;
+            console.log("mainbody stufff");
+            console.log(document.body.style.height);
+            console.log(document.getElementById("main_Body").getBoundingClientRect().height);
+            console.log(document.getElementById("parallax_Effect_Creator").getBoundingClientRect().height);
+            /**console.log(document.getElementById("lastElement").getBoundingClientRect().top);
+            console.log(linkHolder.getBoundingClientRect().top);
+            console.log(linkHolder.getBoundingClientRect().height);
+            console.log(document.body.getBoundingClientRect().height);
+            console.log(document.getElementById("parallax_Effect_Creator").getBoundingClientRect().height);
+            console.log(document.body.style.height - document.getElementById("parallax_Effect_Creator").getBoundingClientRect().height);
+            console.log(document.getElementById("main_Body").style.height);
+            **/
+        }
     }
 }
 //need to make it check to make sure one does not exceend parent size
@@ -263,7 +282,9 @@ function position_Components(images_Have_Loaded){
     }
     for (html_Element of document.getElementsByClassName("box"))
     {
-        HTML_Element_Centerer.center_HTML_Element_Vertically(html_Element);
+        if(!html_Element.classList.contains("videoBox")) {
+            HTML_Element_Centerer.center_HTML_Element_Vertically(html_Element);
+        }
     } 
     for(html_Element of document.getElementsByClassName("text"))
     {
@@ -275,15 +296,27 @@ function position_Components(images_Have_Loaded){
             HTML_Element_Centerer.center_HTML_Element(html_Element);
         }
     }
-    arrange_Links_In_LinkHolders();
+    for (html_Element of document.getElementsByClassName("boxImageLink")) {
+        //there should only ever be one child
+        for(html_Element_Child of html_Element.children) {
+            html_Element.width = html_Element_Child.width;
+            html_Element.height = html_Element_Child.height;
+        }
+    }
     for(html_Element of document.getElementsByClassName("box_Image"))
     {
         if(images_Have_Loaded==true)
         {
+            if (html_Element.parentElement.classList.contains("boxImageLink")) {
+                position_Image(html_Element.parentElement);
+            }
             position_Image(html_Element);
         }
         else
         {
+            if (html_Element.parentElement.classList.contains("boxImageLink")) {
+                html_Element.onload=function(){position_Image(html_Element.parentElement);}
+            }
             html_Element.onload=function(){position_Image(html_Element);}
         }
     }
@@ -291,26 +324,31 @@ function position_Components(images_Have_Loaded){
     {
         if(images_Have_Loaded==true)
         {
+            if (html_Element.parentElement.classList.contains("boxImageLink")) {
+                position_Image(html_Element.parentElement);
+            }
             position_Image(html_Element);
         }
         else
         {
+            if (html_Element.parentElement.classList.contains("boxImageLink")) {
+                html_Element.onload=function(){position_Image(html_Element.parentElement);}
+            }
             html_Element.onload=function(){position_Image(html_Element);}
         }
     }
-    document.body.style.height=convert_Dimension_To_Int(window.getComputedStyle(document.getElementById("main_Body"), null).getPropertyValue("height"))+convert_Dimension_To_Int(window.getComputedStyle(document.getElementsByClassName("parallax_Effect_Creator")[0], null).getPropertyValue("height"))+'px';
-    console.log(window.getComputedStyle(document.body, null).getPropertyValue("height"));
-    console.log(convert_Dimension_To_Int(window.getComputedStyle(document.getElementById("main_Body"), null).getPropertyValue("height"))+convert_Dimension_To_Int(window.getComputedStyle(document.getElementsByClassName("parallax_Effect_Creator")[0], null).getPropertyValue("height")));
-    for (html_Element of document.getElementsByTagName('*'))
-    {
-        console.log(window.getComputedStyle(html_Element, null).getPropertyValue('top')+html_Element.id+html_Element.className+html_Element.tagName);
-    }
+    //calculations for body sizes in arrangelinksinholders to help with efficiency
+    arrange_Links_In_LinkHolders();
 }
 //inital setup
 position_Components(false);
 window.onload = function(){position_Components(true);};
 //we need to find a way to make it that the resize occurs after css sizes from the max(#vw, #px) have loaded
-window.addEventListener("resize", function(){position_Components(true);});
+var doit;
+window.onresize = function() {
+    clearTimeout(doit);
+    doit = setTimeout(position_Components(true), 100);
+}
 
 
 
