@@ -127,6 +127,17 @@ body
     position:relative;
     background-color: black;
 }
+.box_Image
+{
+    position:absolute;
+    margin:0 0 0 0;
+    width:100%;
+}
+.boxVideo {
+    position:absolute;
+    margin:0 0 0 0;
+    width:100%;
+}
 @media (min-width:320px)  {
   /* smartphones, iPhone, portrait 480x320 phones */
 }

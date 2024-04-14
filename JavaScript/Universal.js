@@ -287,6 +287,17 @@ function position_Components(images_Have_Loaded){
             html_Element.onload=function(){position_Image(html_Element);}
         }
     }
+    for(html_Element of document.getElementsByClassName("boxVideo"))
+    {
+        if(images_Have_Loaded==true)
+        {
+            position_Image(html_Element);
+        }
+        else
+        {
+            html_Element.onload=function(){position_Image(html_Element);}
+        }
+    }
     document.body.style.height=convert_Dimension_To_Int(window.getComputedStyle(document.getElementById("main_Body"), null).getPropertyValue("height"))+convert_Dimension_To_Int(window.getComputedStyle(document.getElementsByClassName("parallax_Effect_Creator")[0], null).getPropertyValue("height"))+'px';
     console.log(window.getComputedStyle(document.body, null).getPropertyValue("height"));
     console.log(convert_Dimension_To_Int(window.getComputedStyle(document.getElementById("main_Body"), null).getPropertyValue("height"))+convert_Dimension_To_Int(window.getComputedStyle(document.getElementsByClassName("parallax_Effect_Creator")[0], null).getPropertyValue("height")));
