@@ -32,7 +32,6 @@ function HTML_Element_Centerer()
     HTML_Element_Centerer.center_HTML_Element_Horizontally=center_HTML_Element_Horizontally;
     HTML_Element_Centerer.center_HTML_Element_Vertically=center_HTML_Element_Vertically;
 }
-//need to get the main body stuff to extend far enough, problem with white showing at bottom of screen (top priority)
 function set_Min_Size_To_Size_Of_Child_Elements(html_Element)
 {
     function convert_Dimension_To_Int(dimension)
@@ -53,13 +52,14 @@ function set_Min_Size_To_Size_Of_Child_Elements(html_Element)
     for(child_Element of html_Element.children)
     {
         var baseline=convert_Dimension_To_Int(window.getComputedStyle(child_Element, null).getPropertyValue('top'))+convert_Dimension_To_Int(window.getComputedStyle(child_Element, null).getPropertyValue('height'));
-        if(convert_Dimension_To_Int(window.getComputedStyle(child_Element, null).getPropertyValue('top'))<0)
+        if(convert_Dimension_To_Int(window.getComputedStyle(child_Element, null).getPropertyValue('top')) < 0)
         {
             baseline+=2*Math.abs(convert_Dimension_To_Int(window.getComputedStyle(child_Element, null).getPropertyValue('top')));
         }
-        if(baseline>convert_Dimension_To_Int(window.getComputedStyle(html_Element, null).getPropertyValue('height')))
+        if(baseline + screen.height/20 >convert_Dimension_To_Int(window.getComputedStyle(html_Element, null).getPropertyValue('height')))
         {
-            html_Element.style.height=baseline+'px';
+            html_Element.style.height=baseline + screen.height/20 +'px';
+            console.log(screen.height);
         }
     }
     var new_Height=window.getComputedStyle(html_Element, null).getPropertyValue('height');

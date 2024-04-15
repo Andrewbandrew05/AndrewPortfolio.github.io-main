@@ -73,11 +73,13 @@ body
     outline-offset: 0.25vw;
     color: black;
     border-radius: 0.25vh;
+    text-decoration: none;
     background-color: rgba(400,400,400,0.2);
+    
 }
 .box
 {
-    width:50vw;
+    width: 50vw;
     height:70vh;
     position:absolute;
     margin: 0 0 0 0;
