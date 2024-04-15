@@ -122,7 +122,7 @@ function arrange_Links_In_LinkHolders()
         var total_Links_Processed=0;
         for(html_Element of linkHolder.children)
         {
-            total_Link_Width_In_Row+=parseInt((window.getComputedStyle(html_Element, null).getPropertyValue('width')).replace('px',''));
+            total_Link_Width_In_Row+=parseInt(window.getComputedStyle(html_Element, null).getPropertyValue('width')) + parseInt(window.getComputedStyle(html_Element, null).getPropertyValue("padding-left"))+parseInt(window.getComputedStyle(html_Element, null).getPropertyValue("padding-right"));
             num_Links_In_Row+=1;
             total_Links_Processed+=1;
             if(total_Link_Width_In_Row+((num_Links_In_Row+1)*(html_Element.parentElement.offsetWidth*0.05))>html_Element.parentElement.offsetWidth || total_Link_Width_In_Row+((num_Links_In_Row+1)*7)>html_Element.parentElement.offsetWidth)

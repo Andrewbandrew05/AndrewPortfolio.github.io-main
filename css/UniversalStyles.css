@@ -36,6 +36,15 @@ body
     height:100%;
     margin: 0;
 }
+.scrollable-content ::-webkit-scrollbar {
+    display:none;
+}
+.scrollable-content {
+    -ms-overflo-styole:none;
+}
+.scrollable-content {
+    scrollbar-width: none;
+}
 #title_Of_Page
 {
     display:inline-block;
@@ -70,12 +79,12 @@ body
     outline-style: solid;
     outline-width: 20%;
     outline-color: black;
-    outline-offset: 0.25vw;
     color: black;
     border-radius: 0.25vh;
     text-decoration: none;
     background-color: rgba(400,400,400,0.2);
-    
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }
 .box
 {
