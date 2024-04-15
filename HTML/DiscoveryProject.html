@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="../css/UniversalStyles.css">
+<link rel="stylesheet" href="../css/DiscoveryProject.css">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Discovery Project</title>
+    </head>
+    <body>
+      <div class="parallax_Effect_Creator">
+        <div class="header linkHolder"> 
+            <a class="link" href="../index.html">Home</a>
+            <a class="link" href="Academics">Academics</a>
+            <a class="link" href="YouTube.html">You Tube</a>
+            <a class="link" href="OffRoad.html">GT Off Road</a>
+            <a class="link" href="CampFrienenswald.html">Camp Friedenswald</a>
+            <a class="link" href="Guitar.html">Guitar</a>
+        </div>
+          <h1 id="title_Of_Page">Discovery Project</h1>
+      </div>
+        <div id="main_Body">
+            <h2 class="subtitle">Overview</h2>
+            <div class="side_By_Side">
+                <div class="left_Box box text_Container">
+                    <p class="text">
+                      I set out to mount a pair of hall-effect sensors on the front wheels of OR-9 earlier this semester, one of which is working and the other of which needs 
+                      a new connector. It was a group project in which I played a substantial role, and, while it's still technically not complete, I'm extremely optimistic about its future.
+                    </p>
+                </div>
+                <div class="right_Box box">
+                        <a class = "boxImageLink" href="https://www.misatl.org/">
+                            <img class="box_Image" src="../Images/RandomHallEffectPictureForOffRoadPage.jpg"/>
+                        </a>
+                </div>
+            </div>
+            <h2 class="subtitle">The Beginning</h2>
+            <div class="side_By_Side">
+                    <div class="left_Box box">
+                        <a class= "boxImageLink" href="https://www.gatech.edu/">
+                            <img class="box_Image" src="../Images/DAQBox.jpg"/>
+                        </a>
+                    </div>
+                </a>
+                <div class="right_Box box text_Container">
+                    <p class="text">
+                        I first started experimenting with modifying code currently in use for hall-effects, learning how to properly set the paramters needed to make such a sensor work. This was done
+                        with a small test board and my computer, and, before long, I was ready to put them on the car.
+                    </p>
+                </div>
+            </div>
+            <h2 class="subtitle">Deployment</h2>
+            <div class="side_By_Side">
+                <div class="left_Box box text_Container">
+                    <p class="text">
+                        After Eric (the person designing the brake calipers) had finished his part of the project, I wired up the sensors with some help from Allen (another DAQ member).
+                        I updated the AUX DAQ code to read from the new sensors, and everything seemed to be working perfectly. Unfortunately, though, I couldn't manage to get the AUX DAQ
+                        to wirelessly transmit the data from the new sensors, leading me to call in help from more experience DAQ members.
+                    </p>
+                </div>
+                    <div class="right_Box box">
+                        <a class= "boxImageLink" href="https://www.gatech.edu/">
+                            <img class="box_Image" src="../Images/HallEffectDeploymentPic.jpg"/>
+                        </a>
+                    </div>
+            </div>
+            <h2 class="subtitle">Debugging</h2>
+            <div class="side_By_Side">
+                    <div class="left_Box box">
+                        <a class= "boxImageLink" href="https://www.gatech.edu/">
+                            <img class="box_Image" src="../Images/Ouched Finger.jpg"/>
+                        </a>
+                    </div>
+                </a>
+                <div class="right_Box box text_Container">
+                    <p class="text">
+                        After the dust had settled, I realized that the sensors weren't actually working as planned. A three hour long worksession ensued, during which my 
+                        efforts were routinely frustrated by my inability to terminate female molex connectors. Luckily Visnav (the current DAQ lead) was able to crimp
+                        on the proper connector, allowing the front left sensor to succesfully obtain data. I unfortunately sustained an injury during the work session, a picture
+                        of which you can see on the left. The front right sensor still isn't working to my knowledge, but I hope to have it finished before the next testing day.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer linkHolder">
+            <a class="link" href="../index.html">Home</a>
+            <a class="link" href="Academics">Academics</a>
+            <a class="link" href="YouTube.html">You Tube</a>
+            <a class="link" href="OffRoad.html">GT Off Road</a>
+            <a class="link" href="CampFrienenswald.html">Camp Friedenswald</a>
+            <a class="link" href="Guitar.html">Guitar</a>
+        </div>
+        <script src="../JavaScript/Universal.js">
+    //have this be at end of html so it runs last
+    </script>
+    </body>
+</html>
