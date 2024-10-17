@@ -1,3 +1,6 @@
+document.body.style.overflow = 'scroll';
+document.body.style['-ms-overflow-style'] = 'none';  // IE and Edge
+document.body.style['scrollbar-width'] = 'none';     
 h1
 {
     font-size: 5vw;
