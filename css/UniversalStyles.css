@@ -1,6 +1,13 @@
 document.body.style.overflow = 'scroll';
 document.body.style['-ms-overflow-style'] = 'none';  // IE and Edge
-document.body.style['scrollbar-width'] = 'none';     
+document.body.style['scrollbar-width'] = 'none';    
+const style = document.createElement('style');
+style.innerHTML = `
+  body::-webkit-scrollbar {
+    display: none;
+  }
+`;
+document.head.appendChild(style);
 h1
 {
     font-size: 5vw;
