@@ -1,10 +1,10 @@
-document.body.style.overflow = 'scroll';
-document.body.style['-ms-overflow-style'] = 'none';  // IE and Edge
-document.body.style['scrollbar-width'] = 'none';    
+document.body.style.overflow = 'scroll' !Important;
+document.body.style['-ms-overflow-style'] = 'none' !Important;  // IE and Edge
+document.body.style['scrollbar-width'] = 'none' !Important;    
 const style = document.createElement('style');
 style.innerHTML = `
   body::-webkit-scrollbar {
-    display: none;
+    display: none !Important;
   }
 `;
 document.head.appendChild(style);
