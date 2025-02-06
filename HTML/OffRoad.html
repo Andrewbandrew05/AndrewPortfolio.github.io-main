@@ -88,6 +88,28 @@
                     </p>
                 </div>
             </div>
+            </div><h2 class="subtitle">Hive Mind</h2>
+            <div class="side_By_Side">
+                <div class="left_Box box text_Container">
+                    <p class="text">
+                      Hive Mind represents my most ambitous DAQ project yet. I tasked our Electrical Engineering lead with desiging a new data collection PCB in early January
+                        and the results are astounding. The board pictured on the right features dedicated SPI, I2C, and CAN ports with additional serial and UART connections
+                        available on the right 16 pin connector. The board has a ADS158IRTCR ADC wired up to 16 single ended analog inputs, allowing for a staggering polling rate
+                        of 23.7kSPS per channel at a monumental 24-bit resolution. There's a voltage regulator circuit to step our 7-11V Li-Po batteries down to the 5V required by
+                        the Teensy 4.1 and a coin cell battery hookup to provide continous power to the Teensy's RTC. The plan is to stack anywhere from two to four of these boards
+                        in custom 3D printed mounts on the front and back of the car to form a distributed computing network of microcontrollers. Each microcontroller will be able to
+                        communicate with one another over SPI, sharing data and providing redundancy by doubling up on critical use cases. This will represent an absolutelty massive performance
+                        increase compared with any preceeding DAQ team, pushing our data collection setup to the fore-front of BAJA SAE.
+                    </p>
+                </div>
+                <div class="right_Box box">
+                        <a class = "boxImageLink" href="https://gtor.gatech.edu/">
+                            <video class="boxVideo" autoplay muted loop>
+                                <source src="../Videos/SickOffRoadVId.mp4" type="video/mp4">
+                            </video>
+                        </a>
+                    </div>
+            </div>
         </div>
         <div class="footer linkHolder">
             <a class="link" href="../index.html">Home</a>
