@@ -2,10 +2,10 @@
 {
     background-image: url('../Images/HighSchoolGraduationPic.jpg');
 }
-#main_Body{
-    height : 100vh;
-}
 #resume {
-    height : 100vh;
+    height : 100%;
     width : 100vw;
+}
+.footer{
+    margin-top:0;
 }
