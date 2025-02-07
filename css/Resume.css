@@ -2,3 +2,6 @@
 {
     background-image: url('../Images/HighSchoolGraduationPic.jpg');
 }
+#main_Body{
+    height : 100vh;
+}
