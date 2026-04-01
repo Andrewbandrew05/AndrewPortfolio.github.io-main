@@ -74,6 +74,7 @@ body
 }
 .header
 {
+    vertical-align: top;
     display:inline-block;
     width:100vw;
     position:relative;
